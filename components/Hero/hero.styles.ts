@@ -49,6 +49,12 @@ export const BearImg = styled.div`
     height: 280px;
   }
 `
+export const VerticalDivider = styled.div`
+  width: 1px;
+  height: 29px;
+  margin: auto;
+  border: 1px solid #E5E5E5;
+`
 
 export const LeftContainer = styled.div`
   width: 60%;
@@ -124,7 +130,14 @@ export const StyledInput = styled.input`
 
 export const TextContainer = styled.div`
   width: 100%;
+  @media only screen and (max-width: 600px) {
+    text-transform: 10px;
+  }
 `
+
+export const MobileChangedText = styled.span<{ isMobile: boolean }>`
+  text-transform: ${(props) => (props.isMobile ? `lowercase` : `capitalize`)};
+`;
 
 export const SubTextContainer = styled.div`
   width: 100%;
